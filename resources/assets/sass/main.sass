@@ -1,0 +1,45 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+body.fancybox-iosfix
+	position: relative !important
+	top: inherit !important
+	left: inherit !important
+	right: inherit !important
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	font-family: $default
+	line-height: 1.25
+	background-color: $bgcolor
+	color: $text
+	input, textarea, select
+			border: none
+			outline: none
+			&:focus:required:invalid
+				border-color: red
+			&:required:valid
+				border-color: green
+
+img
+	display: block
+	max-width: 100%
+	height: auto
+
+a
+	outline: none
+
+button
+	cursor: pointer
+	outline: none
+	border: none
+	&:focus
+		outline: none
+
+@import "media" // Always at the end

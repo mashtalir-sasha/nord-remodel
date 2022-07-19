@@ -20,6 +20,7 @@ mix
       'resources/assets/libs/required_fields/jquery.maskedinput.min.js',
       'resources/assets/libs/required_fields/required_fields.js',
       'resources/assets/libs/slick-carousel/slick/slick.min.js',
+      'resources/assets/libs/matchHeight/dist/jquery.matchHeight-min.js',
    ], 'public/js/all.js')
    .js('resources/assets/js/scripts.js', 'public/js')
    .polyfill({

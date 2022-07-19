@@ -5,9 +5,346 @@
 
 //Medium: ≥991px
 +media-breakpoint-down(md)
+	.nav
+		&-mob
+			height: 100%
+			max-height: 0
+			transition: all ease-out .3s
+			overflow: hidden
+			&.show
+				max-height: 200px
+			&__btn
+				float: right
+				padding: 10px 0
+				background-color: transparent
+		&__container
+			padding: 20px 0 10px
+			&:before
+				display: none
+
+	.additional-menu
+		&.show
+			padding-top: 40px
+			padding-bottom: 30px
+		&__link
+			font-size: 16px
+
+	.head
+		&__title
+			font-size: 49px
+
+	.about
+		&:before
+			display: none
+		&__title
+			font-size: 60px
+		&__text
+			font-size: 20px
+			line-height: 30px
+			&_mini
+				font-size: 16px
+				line-height: 20px
+
+	.service
+		&-item
+			&__name
+				font-size: 24px
+
+	.visual
+		&__title
+			margin-bottom: 20px
+
+	.contacts
+		&__title
+			font-size: 32px
+		&__subtitle
+			margin-top: 30px
+			margin-bottom: 10px
 
 //Small: ≥767px
 +media-breakpoint-down(sm)
+	.nav
+		&-mob
+			display: flex
+			flex-direction: column
+			justify-content: center
+			min-height: 0
+			&.show
+				max-height: 100vh
+		&__container
+			flex-direction: column
+		&-list
+			flex-direction: column
+			align-items: center
+			margin-bottom: 20px
+			&__item
+				display: flex
+				flex-direction: column
+				align-items: center
+				& + .nav-list__item
+					margin-left: 0
+					margin-top: 10px
+
+	.additional-menu
+		margin-bottom: 0
+		padding-left: 0
+		list-style-type: none
+		&.show
+			max-height: 350px
+			padding-top: 10px
+			padding-bottom: 10px
+		&__link
+			width: 100%
+			text-align: center
+			padding-bottom: 2px
+		li + li
+			margin-top: 5px
+
+	.head
+		&__img
+			height: 250px
+			object-fit: cover
+		&:after
+			top: 0
+			left: inherit
+			right: 10px
+		&__description
+			padding-left: 70px
+			font-size: 18px
+		&__btn
+			float: right
+			margin: 0 5px
+
+	.site-item
+		margin-top: 20px
+
+	.achievement
+		padding-bottom: 30px
+		.col-md-4
+			.achievement-item
+				position: relative
+				display: flex
+				flex-direction: column
+				align-items: flex-end
+				text-align: right
+				padding-bottom: 20px
+				margin-bottom: 40px
+				&:before
+					content: ''
+					width: 100%
+					max-width: 200px
+					height: 1px
+					background-color: $accent
+					position: absolute
+					bottom: 0
+					right: 0
+				&__text
+					max-width: 290px
+					&:before
+						left: inherit
+						right: 0
+			&:first-child, &:last-child
+				.achievement-item
+					align-items: flex-start
+					text-align: left
+					&:before
+						right: inherit
+						left: 0
+					&__text
+						&:before
+							right: inherit
+							left: 0
+		.col-lg-10
+			padding-bottom: 0
+			&:after
+				display: none
+
+	.about
+		&:after
+			display: none
+		&:before
+			display: block
+			font-size: 130px
+			top: inherit
+			right: inherit
+			left: 0
+			bottom: 0
+			z-index: 1
+			transform: rotate(-90deg) translate(140%, -77%)
+		&__title
+			position: relative
+			z-index: 1
+			font-size: 40px
+		&__text
+			position: relative
+			z-index: 1
+			max-width: 75%
+			font-size: 16px
+			line-height: 20px
+			&_mini
+				float: right
+				margin: 70px 0
+		.container:before
+			left: 70%
+
+	.service
+		&-item
+			&__image
+				max-width: 75%
+
+	.services
+		.col-md-6
+			&:nth-child(2n)
+				.service-item
+					overflow: hidden
+					&__image
+						float: right
+					&__container
+						float: right
+
+	.visual
+		&:before
+			display: none
+
+	.reviews
+		padding-bottom: 30px
+		&-slider
+			.slick-list
+				padding-right: 120px
+
+	.partners
+		&__container
+			padding-top: 0
+			padding-bottom: 0
+			&:before
+				display: none
+
+	.partner
+		margin-bottom: 20px
 
 //Extra small: ≥575px
 +media-breakpoint-down(xs)
+	.container
+		padding-left: 30px
+		padding-right: 30px
+
+	.nav
+		&__logo
+			max-width: 60px
+
+	.head
+		&:before
+			top: inherit
+			bottom: 100px
+			width: 190px
+			height: 280px
+			background-size: cover
+		&__title
+			font-size: 46px
+		&__btn
+			border-left: 3px solid
+			border-right: 3px solid
+			border-color: $accent
+			&:before, &:after
+				display: none
+			&:hover
+				border-color: #000
+				color: #000
+
+	.site-item
+		&__stars
+			span
+				width: 10px
+				height: 10px
+				background-size: cover
+
+	.services
+		&__title
+			font-size: 60px
+			text-align: center
+
+	.service
+		&-item
+			&__btn
+				border-left: 3px solid
+				border-right: 3px solid
+				border-color: #9C9C9C
+				&:before, &:after
+					display: none
+				&:hover
+					border-color: $accent
+					color: $accent
+
+	.visual
+		&__container
+			&:before
+				width: 100%
+				height: 120%
+				top: -10%
+				left: 0
+			&:after
+				display: none
+		&__title
+			font-size: 20px
+		&__subtitle
+			font-size: 20px
+		&__text
+			font-size: 16px
+		&-form
+			&__title
+				font-size: 30px
+			&__text
+				float: none
+				text-align: left
+				font-size: 16px
+			&__area
+				min-height: 115px
+			&__btn
+				border-left: 3px solid
+				border-right: 3px solid
+				border-color: $accent
+				&:before, &:after
+					display: none
+				&:hover
+					border-color: #fff
+					color: #fff
+
+	.reviews
+		&-slider
+			.slick-list
+				padding-right: 100px
+
+	.partners
+		&__title
+			font-size: 40px
+			margin-bottom: 30px
+		.col-6
+			padding: 0 20px
+
+	.partner
+		margin-bottom: 60px
+
+	.request
+		&__title
+			font-size: 50px
+		&__text
+			font-size: 20px
+		&-form
+			&__btn
+				font-size: 18px
+				border-left: 3px solid
+				border-right: 3px solid
+				border-color: $accent
+				&:before, &:after
+					display: none
+				&:hover
+					border-color: #000
+					color: #000
+
+	.dev
+		&__text
+			font-size: 13px
+
+	.contacts
+		&__subtitle
+			margin-top: 60px

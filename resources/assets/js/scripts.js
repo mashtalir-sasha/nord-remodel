@@ -1,23 +1,39 @@
 $(function() {
 
-	/*let toggle = document.querySelector('.nav-toggle')
+	let toggle = document.querySelector('.nav-mob__btn')
 	let navMob = document.querySelector('.nav-mob')
 	toggle.addEventListener('click', function(e) {
-		this.classList.toggle('opened')
 		navMob.classList.toggle('show')
 	})
 
-	let clickNav = document.querySelectorAll('.nav-list__item .anchor')
+	const navHeight = $('.nav').innerHeight()
+	$('.height').css('margin-top', navHeight)
+
+	if ($(window).width() < 768) {
+		$('.nav-mob').css('height', 'calc(100vh - '+navHeight+'px)')
+	}
+	
+
+	let toggleAdd = document.querySelector('.open-additional')
+	let navAdd = document.querySelectorAll('.additional-menu')
+	toggleAdd.addEventListener('click', function(e) {
+		this.classList.toggle('open')
+
+		for (let nav of navAdd) {
+		  nav.classList.toggle('show');
+		}
+	})
+
+	/*let clickNav = document.querySelectorAll('.nav-list__item .anchor')
 
 	clickNav.forEach(el => {
 		el.addEventListener("click", () => {
 			toggle.classList.remove('opened')
 			navMob.classList.remove('show')
 		})
-	})*/
+	})
 
-	const navHeight = $('.nav').innerHeight()
-	$('.height').css('margin-top', navHeight)
+	*/
 
 	// Скролинг по якорям
 	$('.anchor').bind("click", function(e){
@@ -28,41 +44,18 @@ $(function() {
 	e.preventDefault()
 	})
 
-	/*$('.clients-slider').slick({
+	$('.achievement-item__text').matchHeight()
+
+	$('.reviews-slider').slick({
 		infinite: false,
-		slidesToShow: 4,
-		slidesToScroll: 4,
+		slidesToShow: 1,
+		slidesToScroll: 1,
 		adaptiveHeight: true,
 		arrows: false,
-		dots: true,
+		dots: false,
 		autoplay: true,
-		autoplaySpeed: 5000,
-		responsive: [
-			{
-				breakpoint: 992,
-				settings: {
-					slidesToShow: 3,
-					slidesToScroll: 3
-				}
-			},
-			{
-				breakpoint: 768,
-				settings: {
-					slidesToShow: 2,
-					slidesToScroll: 2
-				}
-			},
-			{
-				breakpoint: 576,
-				settings: {
-					rows: 3,
-					slidesPerRow: 1,
-					slidesToShow: 1,
-					slidesToScroll: 1,
-				}
-			},
-		]
-	})*/
+		autoplaySpeed: 5000
+	})
 
 	// Инит фансибокса
 	$('.fancybox').fancybox({

@@ -5176,8 +5176,11 @@ button:focus {
     font-size: 18px;
   }
   .head__btn {
-    float: right;
-    margin: 0 5px;
+    margin: 0 5px 0 70px;
+    display: block;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
   }
   .site-item {
     margin-top: 20px;

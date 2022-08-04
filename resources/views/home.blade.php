@@ -531,7 +531,7 @@
 			<div class="col-md-6">
 				<h3 class="request__title">SUBMIT<br>a request</h3>
 			</div>
-			<div class="col-md-6 col-10 offset-2 offset-md-0">
+			<div class="col-md-6">
 				<p class="request__text">If you have any questions, please submit a request, and our specialist will come and answer all your questions.</p>
 			</div>
 		</div>
